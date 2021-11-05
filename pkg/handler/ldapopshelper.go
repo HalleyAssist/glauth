@@ -115,10 +115,12 @@ func (l LDAPOpsHelper) Bind(h LDAPOpsHandler, bindDN, bindSimplePw string, conn 
 			return ldap.LDAPResultInvalidCredentials, nil
 		}
 
+		/*
 		if !strings.EqualFold(groupName, "svcaccts") {
 			h.GetLog().V(2).Info("BindDN should be in svcaccts group")
 			return ldap.LDAPResultInvalidCredentials, nil
 		}
+		*/
 
 		// find the user
 		var foundUser bool // = false
